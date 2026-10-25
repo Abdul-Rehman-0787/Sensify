@@ -1,0 +1,5 @@
+ALERT -> https://api.factory.com/maintenance : Abnormal vibration (value=9.50)
+ALERT -> https://api.factory.com/maintenance : Abnormal vibration (value=1.20)
+EMIT value=17.00
+EMIT value=64.00
+ALERT -> https://api.factory.com/maintenance : Abnormal vibration (value=0.50)

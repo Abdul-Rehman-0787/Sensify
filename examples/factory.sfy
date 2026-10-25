@@ -1,0 +1,19 @@
+// Two sensors, two pipelines
+sensor pressure = input(9000);
+sensor vibration = input(9001);
+endpoint maintenance = output("https://api.factory.com/maintenance");
+
+pipeline PressureWatch {
+    ingest pressure
+        |> sumWindow(3)
+        |> scale(0.5)
+        |> offset(-1)
+        |> filter(value >= 10 && value <= 100)
+        |> emit();
+}
+
+pipeline VibrationWatch {
+    ingest vibration
+        |> filter(value < 2 || value > 8)
+        |> trigger(maintenance, "Abnormal vibration");
+}

@@ -1,0 +1,4 @@
+sensor temp = input(8080);
+pipeline Bad {
+    ingest temp |> averageWindow(3);
+}

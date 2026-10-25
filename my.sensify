@@ -1,0 +1,9 @@
+sensor temp = input(8080);
+endpoint alarm = output("https://example.com/alert");
+
+pipeline Test {
+    ingest temp
+        |> averageWindow(3)
+        |> filter(value > 50)
+        |> trigger(alarm, "Too hot");
+}
