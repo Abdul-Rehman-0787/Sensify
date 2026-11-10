@@ -1,14 +1,7 @@
-# 1. Start from a base image that has C++ compilers installed
-FROM gcc:latest
-
-# 2. Set the working directory inside the container
-WORKDIR /usr/src/app
-
-# 3. Copy your local files into the container's working directory
-COPY . .
-
-# 4. Compile the C++ code
-RUN g++ -o myapp main.cpp
-
-# 5. Tell Docker what command to run when the container starts
-CMD ["./myapp"]
+FROM ubuntu:24.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    flex bison gcc g++ make clang diffutils ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
+CMD ["bash"]
