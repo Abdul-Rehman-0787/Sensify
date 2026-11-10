@@ -1,0 +1,2 @@
+sensor temp = input(8080)
+pipeline Bad { ingest temp |> emit(); }

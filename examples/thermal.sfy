@@ -1,0 +1,13 @@
+// Sample program from the proposal
+sensor temp_stream = input(8080);
+endpoint cloud_alert = output("https://api.factory.com/alert");
+
+pipeline ThermalMonitor {
+    ingest temp_stream
+        // Smoothing: keep a rolling average of the last 5 readings
+        |> averageWindow(5)
+        // Drop normal temperatures to save bandwidth
+        |> filter(value > 65.5)
+        // Send the alert
+        |> trigger(cloud_alert, "Critical Overheating Detected");
+}
