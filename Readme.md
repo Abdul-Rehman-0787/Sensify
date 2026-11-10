@@ -1,6 +1,14 @@
 # Sensify
 
-**Compiler Design Project — Phase 1: Interpreter | Phase 2: Ahead-of-Time (AOT) Compiler**
+**Compiler Construction Project — Phase 1: Interpreter | Phase 2: Ahead-of-Time (AOT) Compiler**
+
+## Project Team
+
+| Name | Roll Number |
+|---|---|
+| Abdul Rehman | 23-0787 |
+| Muhammad Fakhir | 22L-6827 |
+| Danyal Rehman | 22L-6576 |
 
 Sensify is a small domain-specific language (DSL) designed for IoT edge-stream processing. A Sensify program declares input sensors and output endpoints, then defines pipelines that process incoming values. Each pipeline starts with a sensor, applies one or more processing stages using the `|>` operator, and finishes with an output stage.
 

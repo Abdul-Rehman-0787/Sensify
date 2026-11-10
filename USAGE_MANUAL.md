@@ -1,6 +1,14 @@
-# Sensify Project: Usage Manual
+# Compiler Construction Project: Sensify Usage Manual
 
 This manual explains how to build and run the Sensify project on Windows using Docker, Ubuntu/WSL2, and macOS. Follow the section for your operating system and run the commands in the order shown.
+
+## Project Team
+
+| Name | Roll Number |
+|---|---|
+| Abdul Rehman | 23-0787 |
+| Muhammad Fakhir | 22L-6827 |
+| Danyal Rehman | 22L-6576 |
 
 ## 1. Windows (using Docker)
 
