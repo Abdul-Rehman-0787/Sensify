@@ -1,0 +1,6 @@
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=66.60)
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=73.30)
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=81.40)
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=83.00)
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=78.90)
+ALERT -> https://api.factory.com/alert : Critical Overheating Detected (value=67.90)
